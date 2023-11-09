@@ -15,7 +15,7 @@
     "product_name": {
       "type": "string"
     },
-    "peoduct_photo": {
+    "product_photo": {
       "type": "media",
       "multiple": true,
       "required": false,

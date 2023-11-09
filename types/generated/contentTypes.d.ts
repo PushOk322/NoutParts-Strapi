@@ -375,7 +375,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
   attributes: {
     product_name: Attribute.String;
-    peoduct_photo: Attribute.Media;
+    product_photo: Attribute.Media;
     product_status: Attribute.String;
     product_tag: Attribute.String;
     product_energy_consumption: Attribute.Integer;

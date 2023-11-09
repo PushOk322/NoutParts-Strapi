@@ -1,19 +1,25 @@
 module.exports = [
-  'strapi::errors',
+  "strapi::errors",
   {
-    name: 'strapi::security',
+    name: "strapi::security",
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com'],
-          'media-src': [
+          "connect-src": ["'self'", "https:"],
+          "img-src": [
             "'self'",
-            'data:',
-            'blob:',
-            'market-assets.strapi.io',
-            'res.cloudinary.com',
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            "res.cloudinary.com",
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            "res.cloudinary.com",
           ],
           upgradeInsecureRequests: null,
         },
@@ -21,26 +27,23 @@ module.exports = [
     },
   },
   {
-    "timeout": 100,
-    "load": {
-      "before": ["responseTime", "logger", "cors", "responses", "gzip"],
-      "order": [
-        "Define the middlewares' load order by putting their name in this array is the right order"
+    name: "strapi::cors",
+    config: {
+      origin: [
+        "http://localhost:3000",
+        "https://subdomain.example.com",
+        "https://someotherwebsite.org",
       ],
-      "after": ["parser", "router"]
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+      keepHeaderOnError: true,
     },
-    "settings": {
-      "cors": {
-        "enabled": false,
-        "headers": "*"
-      }
-    }
   },
-  'strapi::poweredBy',
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::poweredBy",
+  "strapi::logger",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];

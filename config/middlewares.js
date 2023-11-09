@@ -31,7 +31,7 @@ module.exports = [
     },
     "settings": {
       "cors": {
-        "enabled": true,
+        "enabled": false,
         "headers": "*"
       }
     }

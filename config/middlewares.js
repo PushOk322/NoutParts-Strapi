@@ -26,19 +26,7 @@ module.exports = [
       },
     },
   },
-  {
-    name: "strapi::cors",
-    config: {
-      origin: [
-        "http://localhost:3000",
-        "https://subdomain.example.com",
-        "https://someotherwebsite.org",
-      ],
-      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
-      keepHeaderOnError: true,
-    },
-  },
+  "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",

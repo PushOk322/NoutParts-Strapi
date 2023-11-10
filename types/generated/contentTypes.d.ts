@@ -382,6 +382,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     product_profitability: Attribute.Decimal;
     product_hashrate: Attribute.Integer;
     product_price: Attribute.Integer;
+    product_type: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

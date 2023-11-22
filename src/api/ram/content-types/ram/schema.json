@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rams",
+  "info": {
+    "singularName": "ram",
+    "pluralName": "rams",
+    "displayName": "Ram",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ram_name": {
+      "type": "string"
+    },
+    "ram_jedec": {
+      "type": "string"
+    },
+    "ram_pin_quantity": {
+      "type": "integer"
+    },
+    "ram_voltage": {
+      "type": "integer"
+    },
+    "ram_memory_mb": {
+      "type": "integer"
+    },
+    "ram_frequency_mhz": {
+      "type": "integer"
+    },
+    "ram_memory_type": {
+      "type": "string"
+    }
+  }
+}

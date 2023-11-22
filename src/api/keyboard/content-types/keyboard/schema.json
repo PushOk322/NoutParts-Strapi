@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "keyboards",
+  "info": {
+    "singularName": "keyboard",
+    "pluralName": "keyboards",
+    "displayName": "Keyboard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "keyboard_backlight": {
+      "type": "string"
+    },
+    "keyboard_layout": {
+      "type": "string"
+    },
+    "keyboard_form_factor": {
+      "type": "string"
+    },
+    "keyboard_color": {
+      "type": "string"
+    },
+    "keyboard_name": {
+      "type": "string"
+    }
+  }
+}

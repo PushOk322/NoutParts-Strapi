@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hdds",
+  "info": {
+    "singularName": "hdd",
+    "pluralName": "hdds",
+    "displayName": "Hdd"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hdd_name": {
+      "type": "string"
+    },
+    "hdd_memory_mb": {
+      "type": "string"
+    },
+    "hdd_connector": {
+      "type": "string"
+    },
+    "hdd_technology": {
+      "type": "string"
+    }
+  }
+}

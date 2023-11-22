@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "power_supplies",
+  "info": {
+    "singularName": "power-supply",
+    "pluralName": "power-supplies",
+    "displayName": "PowerSupply"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "power_supply_name": {
+      "type": "string"
+    },
+    "power_supply_power": {
+      "type": "integer"
+    },
+    "power_supply_voltage": {
+      "type": "integer"
+    },
+    "power_supply_amperage": {
+      "type": "integer"
+    },
+    "power_supply_form_factor": {
+      "type": "string"
+    },
+    "power_supply_plug": {
+      "type": "string"
+    }
+  }
+}

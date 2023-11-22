@@ -362,6 +362,49 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiMatrixMatrix extends Schema.CollectionType {
+  collectionName: 'matrices';
+  info: {
+    singularName: 'matrix';
+    pluralName: 'matrices';
+    displayName: 'Matrix';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    matrix_brand: Attribute.String;
+    matrix_diagonale: Attribute.String;
+    matrix_permission: Attribute.String;
+    matrix_fastening: Attribute.String;
+    matrix_fiber_optic_technology: Attribute.String;
+    matrix_connector: Attribute.String;
+    matrix_backlight_type: Attribute.String;
+    matrix_hashrate: Attribute.Integer;
+    matrix_price: Attribute.Integer;
+    matrix_photo: Attribute.Media;
+    product_tag: Attribute.String;
+    product_status: Attribute.String;
+    matrix_name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Schema.CollectionType {
   collectionName: 'posts';
   info: {
@@ -389,7 +432,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
   info: {
     singularName: 'product';
     pluralName: 'products';
-    displayName: 'Product';
+    displayName: 'Battery';
     description: '';
   };
   options: {
@@ -749,6 +792,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::matrix.matrix': ApiMatrixMatrix;
       'api::post.post': ApiPostPost;
       'api::product.product': ApiProductProduct;
       'plugin::upload.file': PluginUploadFile;

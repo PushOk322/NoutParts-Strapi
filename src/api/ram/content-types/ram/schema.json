@@ -22,7 +22,7 @@
       "type": "integer"
     },
     "ram_voltage": {
-      "type": "integer"
+      "type": "float"
     },
     "ram_memory_mb": {
       "type": "integer"
@@ -32,6 +32,29 @@
     },
     "ram_memory_type": {
       "type": "string"
+    },
+    "ram_brand": {
+      "type": "string"
+    },
+    "ram_photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ram_availability": {
+      "type": "string"
+    },
+    "ram_tag": {
+      "type": "string"
+    },
+    "ram_price": {
+      "type": "integer"
     }
   }
 }

@@ -362,110 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiMatrixMatrix extends Schema.CollectionType {
-  collectionName: 'matrices';
-  info: {
-    singularName: 'matrix';
-    pluralName: 'matrices';
-    displayName: 'Matrix';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    matrix_brand: Attribute.String;
-    matrix_diagonale: Attribute.String;
-    matrix_permission: Attribute.String;
-    matrix_fastening: Attribute.String;
-    matrix_fiber_optic_technology: Attribute.String;
-    matrix_connector: Attribute.String;
-    matrix_backlight_type: Attribute.String;
-    matrix_hashrate: Attribute.Integer;
-    matrix_price: Attribute.Integer;
-    matrix_photo: Attribute.Media;
-    product_tag: Attribute.String;
-    product_status: Attribute.String;
-    matrix_name: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::matrix.matrix',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::matrix.matrix',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPostPost extends Schema.CollectionType {
-  collectionName: 'posts';
-  info: {
-    singularName: 'post';
-    pluralName: 'posts';
-    displayName: 'post';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    text: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiProductProduct extends Schema.CollectionType {
-  collectionName: 'products';
-  info: {
-    singularName: 'product';
-    pluralName: 'products';
-    displayName: 'Battery';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    product_name: Attribute.String;
-    product_photo: Attribute.Media;
-    product_status: Attribute.String;
-    product_tag: Attribute.String;
-    product_energy_consumption: Attribute.Integer;
-    product_profitability: Attribute.Decimal;
-    product_hashrate: Attribute.Integer;
-    product_price: Attribute.Integer;
-    product_type: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -782,12 +678,53 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBatteryBattery extends Schema.CollectionType {
+  collectionName: 'batteries';
+  info: {
+    singularName: 'battery';
+    pluralName: 'batteries';
+    displayName: 'Battery';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    battery_name: Attribute.String;
+    battery_capacity: Attribute.Integer;
+    battery_voltage: Attribute.Decimal;
+    battery_type: Attribute.String;
+    battery_color: Attribute.String;
+    batter_brand: Attribute.String;
+    battery_photo: Attribute.Media;
+    battery_availability: Attribute.String;
+    battery_tag: Attribute.String;
+    battery_price: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::battery.battery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::battery.battery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHddHdd extends Schema.CollectionType {
   collectionName: 'hdds';
   info: {
     singularName: 'hdd';
     pluralName: 'hdds';
     displayName: 'Hdd';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -797,6 +734,11 @@ export interface ApiHddHdd extends Schema.CollectionType {
     hdd_memory_mb: Attribute.String;
     hdd_connector: Attribute.String;
     hdd_technology: Attribute.String;
+    hdd_brand: Attribute.String;
+    hdd_photo: Attribute.Media;
+    hdd_availability: Attribute.String;
+    hdd_tag: Attribute.String;
+    hdd_price: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -819,11 +761,16 @@ export interface ApiKeyboardKeyboard extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    keyboard_backlight: Attribute.String;
+    keyboard_name: Attribute.String;
     keyboard_layout: Attribute.String;
     keyboard_form_factor: Attribute.String;
     keyboard_color: Attribute.String;
-    keyboard_name: Attribute.String;
+    keyboard_backlight: Attribute.String;
+    keyboard_photo: Attribute.Media;
+    keyboard_brand: Attribute.String;
+    keyboard_availability: Attribute.String;
+    keyboard_tag: Attribute.String;
+    keyboard_price: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -842,24 +789,45 @@ export interface ApiKeyboardKeyboard extends Schema.CollectionType {
   };
 }
 
-export interface ApiPostPost extends Schema.CollectionType {
-  collectionName: 'posts';
+export interface ApiMatrixMatrix extends Schema.CollectionType {
+  collectionName: 'matrices';
   info: {
-    singularName: 'post';
-    pluralName: 'posts';
-    displayName: 'post';
+    singularName: 'matrix';
+    pluralName: 'matrices';
+    displayName: 'Matrix';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    text: Attribute.String;
+    matrix_brand: Attribute.String;
+    matrix_diagonale: Attribute.String;
+    matrix_permission: Attribute.String;
+    matrix_fastening: Attribute.String;
+    matrix_fiber_optic_technology: Attribute.String;
+    matrix_connector: Attribute.String;
+    matrix_backlight_type: Attribute.String;
+    matrix_hashrate: Attribute.Integer;
+    matrix_price: Attribute.Integer;
+    matrix_photo: Attribute.Media;
+    matrix_name: Attribute.String;
+    matrix_availability: Attribute.String;
+    matrix_tag: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -870,6 +838,7 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
     singularName: 'power-supply';
     pluralName: 'power-supplies';
     displayName: 'PowerSupply';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -877,10 +846,15 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
   attributes: {
     power_supply_name: Attribute.String;
     power_supply_power: Attribute.Integer;
-    power_supply_voltage: Attribute.Integer;
+    power_supply_voltage: Attribute.Float;
     power_supply_amperage: Attribute.Integer;
     power_supply_form_factor: Attribute.String;
     power_supply_plug: Attribute.String;
+    power_supply_brand: Attribute.String;
+    power_supply_photo: Attribute.Media;
+    power_supply_availability: Attribute.String;
+    power_supply_tag: Attribute.String;
+    power_supply_price: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -892,45 +866,6 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::power-supply.power-supply',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiProductProduct extends Schema.CollectionType {
-  collectionName: 'products';
-  info: {
-    singularName: 'product';
-    pluralName: 'products';
-    displayName: 'Product';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    product_name: Attribute.String;
-    product_photo: Attribute.Media;
-    product_status: Attribute.String;
-    product_tag: Attribute.String;
-    product_energy_consumption: Attribute.Integer;
-    product_profitability: Attribute.Decimal;
-    product_hashrate: Attribute.Integer;
-    product_price: Attribute.Integer;
-    product_type: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::product.product',
       'oneToOne',
       'admin::user'
     > &
@@ -953,10 +888,15 @@ export interface ApiRamRam extends Schema.CollectionType {
     ram_name: Attribute.String;
     ram_jedec: Attribute.String;
     ram_pin_quantity: Attribute.Integer;
-    ram_voltage: Attribute.Integer;
+    ram_voltage: Attribute.Float;
     ram_memory_mb: Attribute.Integer;
     ram_frequency_mhz: Attribute.Integer;
     ram_memory_type: Attribute.String;
+    ram_brand: Attribute.String;
+    ram_photo: Attribute.Media;
+    ram_availability: Attribute.String;
+    ram_tag: Attribute.String;
+    ram_price: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -977,18 +917,17 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::matrix.matrix': ApiMatrixMatrix;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::battery.battery': ApiBatteryBattery;
       'api::hdd.hdd': ApiHddHdd;
       'api::keyboard.keyboard': ApiKeyboardKeyboard;
-      'api::post.post': ApiPostPost;
+      'api::matrix.matrix': ApiMatrixMatrix;
       'api::power-supply.power-supply': ApiPowerSupplyPowerSupply;
-      'api::product.product': ApiProductProduct;
       'api::ram.ram': ApiRamRam;
     }
   }

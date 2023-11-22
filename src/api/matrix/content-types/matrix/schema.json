@@ -50,13 +50,13 @@
         "audios"
       ]
     },
-    "product_tag": {
-      "type": "string"
-    },
-    "product_status": {
-      "type": "string"
-    },
     "matrix_name": {
+      "type": "string"
+    },
+    "matrix_availability": {
+      "type": "string"
+    },
+    "matrix_tag": {
       "type": "string"
     }
   }

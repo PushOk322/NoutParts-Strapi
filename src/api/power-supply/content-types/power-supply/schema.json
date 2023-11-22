@@ -4,7 +4,8 @@
   "info": {
     "singularName": "power-supply",
     "pluralName": "power-supplies",
-    "displayName": "PowerSupply"
+    "displayName": "PowerSupply",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,7 @@
       "type": "integer"
     },
     "power_supply_voltage": {
-      "type": "integer"
+      "type": "float"
     },
     "power_supply_amperage": {
       "type": "integer"
@@ -28,6 +29,29 @@
     },
     "power_supply_plug": {
       "type": "string"
+    },
+    "power_supply_brand": {
+      "type": "string"
+    },
+    "power_supply_photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "power_supply_availability": {
+      "type": "string"
+    },
+    "power_supply_tag": {
+      "type": "string"
+    },
+    "power_supply_price": {
+      "type": "integer"
     }
   }
 }

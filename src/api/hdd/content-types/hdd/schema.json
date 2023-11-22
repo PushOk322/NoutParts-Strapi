@@ -4,7 +4,8 @@
   "info": {
     "singularName": "hdd",
     "pluralName": "hdds",
-    "displayName": "Hdd"
+    "displayName": "Hdd",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,29 @@
     },
     "hdd_technology": {
       "type": "string"
+    },
+    "hdd_brand": {
+      "type": "string"
+    },
+    "hdd_photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "hdd_availability": {
+      "type": "string"
+    },
+    "hdd_tag": {
+      "type": "string"
+    },
+    "hdd_price": {
+      "type": "integer"
     }
   }
 }

@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "keyboard_backlight": {
+    "keyboard_name": {
       "type": "string"
     },
     "keyboard_layout": {
@@ -24,8 +24,31 @@
     "keyboard_color": {
       "type": "string"
     },
-    "keyboard_name": {
+    "keyboard_backlight": {
       "type": "string"
+    },
+    "keyboard_photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "keyboard_brand": {
+      "type": "string"
+    },
+    "keyboard_availability": {
+      "type": "string"
+    },
+    "keyboard_tag": {
+      "type": "string"
+    },
+    "keyboard_price": {
+      "type": "integer"
     }
   }
 }

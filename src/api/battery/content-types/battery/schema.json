@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "batteries",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
+    "singularName": "battery",
+    "pluralName": "batteries",
     "displayName": "Battery",
     "description": ""
   },
@@ -12,10 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "product_name": {
+    "battery_name": {
       "type": "string"
     },
-    "product_photo": {
+    "battery_capacity": {
+      "type": "integer"
+    },
+    "battery_voltage": {
+      "type": "decimal"
+    },
+    "battery_type": {
+      "type": "string"
+    },
+    "battery_color": {
+      "type": "string"
+    },
+    "batter_brand": {
+      "type": "string"
+    },
+    "battery_photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -26,26 +41,14 @@
         "audios"
       ]
     },
-    "product_status": {
+    "battery_availability": {
       "type": "string"
     },
-    "product_tag": {
+    "battery_tag": {
       "type": "string"
     },
-    "product_energy_consumption": {
+    "battery_price": {
       "type": "integer"
-    },
-    "product_profitability": {
-      "type": "decimal"
-    },
-    "product_hashrate": {
-      "type": "integer"
-    },
-    "product_price": {
-      "type": "integer"
-    },
-    "product_type": {
-      "type": "string"
     }
   }
 }

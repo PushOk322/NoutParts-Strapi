@@ -782,6 +782,191 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiHddHdd extends Schema.CollectionType {
+  collectionName: 'hdds';
+  info: {
+    singularName: 'hdd';
+    pluralName: 'hdds';
+    displayName: 'Hdd';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hdd_name: Attribute.String;
+    hdd_memory_mb: Attribute.String;
+    hdd_connector: Attribute.String;
+    hdd_technology: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiKeyboardKeyboard extends Schema.CollectionType {
+  collectionName: 'keyboards';
+  info: {
+    singularName: 'keyboard';
+    pluralName: 'keyboards';
+    displayName: 'Keyboard';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    keyboard_backlight: Attribute.String;
+    keyboard_layout: Attribute.String;
+    keyboard_form_factor: Attribute.String;
+    keyboard_color: Attribute.String;
+    keyboard_name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::keyboard.keyboard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::keyboard.keyboard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPostPost extends Schema.CollectionType {
+  collectionName: 'posts';
+  info: {
+    singularName: 'post';
+    pluralName: 'posts';
+    displayName: 'post';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    text: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
+  collectionName: 'power_supplies';
+  info: {
+    singularName: 'power-supply';
+    pluralName: 'power-supplies';
+    displayName: 'PowerSupply';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    power_supply_name: Attribute.String;
+    power_supply_power: Attribute.Integer;
+    power_supply_voltage: Attribute.Integer;
+    power_supply_amperage: Attribute.Integer;
+    power_supply_form_factor: Attribute.String;
+    power_supply_plug: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::power-supply.power-supply',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::power-supply.power-supply',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: 'Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    product_name: Attribute.String;
+    product_photo: Attribute.Media;
+    product_status: Attribute.String;
+    product_tag: Attribute.String;
+    product_energy_consumption: Attribute.Integer;
+    product_profitability: Attribute.Decimal;
+    product_hashrate: Attribute.Integer;
+    product_price: Attribute.Integer;
+    product_type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRamRam extends Schema.CollectionType {
+  collectionName: 'rams';
+  info: {
+    singularName: 'ram';
+    pluralName: 'rams';
+    displayName: 'Ram';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ram_name: Attribute.String;
+    ram_jedec: Attribute.String;
+    ram_pin_quantity: Attribute.Integer;
+    ram_voltage: Attribute.Integer;
+    ram_memory_mb: Attribute.Integer;
+    ram_frequency_mhz: Attribute.Integer;
+    ram_memory_type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::ram.ram', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::ram.ram', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -793,14 +978,18 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::matrix.matrix': ApiMatrixMatrix;
-      'api::post.post': ApiPostPost;
-      'api::product.product': ApiProductProduct;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::hdd.hdd': ApiHddHdd;
+      'api::keyboard.keyboard': ApiKeyboardKeyboard;
+      'api::post.post': ApiPostPost;
+      'api::power-supply.power-supply': ApiPowerSupplyPowerSupply;
+      'api::product.product': ApiProductProduct;
+      'api::ram.ram': ApiRamRam;
     }
   }
 }

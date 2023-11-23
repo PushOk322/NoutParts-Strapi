@@ -38,7 +38,7 @@
         "audios"
       ]
     },
-    "keyboard_brand": {
+    "brand": {
       "type": "string"
     },
     "keyboard_availability": {

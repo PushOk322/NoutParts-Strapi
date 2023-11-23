@@ -33,7 +33,7 @@
     "ram_memory_type": {
       "type": "string"
     },
-    "ram_brand": {
+    "brand": {
       "type": "string"
     },
     "ram_photo": {

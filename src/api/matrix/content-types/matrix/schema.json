@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "matrix_brand": {
+    "brand": {
       "type": "string"
     },
     "matrix_diagonale": {

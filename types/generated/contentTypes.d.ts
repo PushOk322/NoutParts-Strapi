@@ -695,7 +695,7 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
     battery_voltage: Attribute.Decimal;
     battery_type: Attribute.String;
     battery_color: Attribute.String;
-    batter_brand: Attribute.String;
+    brand: Attribute.String;
     battery_photo: Attribute.Media;
     battery_availability: Attribute.String;
     battery_tag: Attribute.String;
@@ -734,7 +734,7 @@ export interface ApiHddHdd extends Schema.CollectionType {
     hdd_memory_mb: Attribute.String;
     hdd_connector: Attribute.String;
     hdd_technology: Attribute.String;
-    hdd_brand: Attribute.String;
+    brand: Attribute.String;
     hdd_photo: Attribute.Media;
     hdd_availability: Attribute.String;
     hdd_tag: Attribute.String;
@@ -767,7 +767,7 @@ export interface ApiKeyboardKeyboard extends Schema.CollectionType {
     keyboard_color: Attribute.String;
     keyboard_backlight: Attribute.String;
     keyboard_photo: Attribute.Media;
-    keyboard_brand: Attribute.String;
+    brand: Attribute.String;
     keyboard_availability: Attribute.String;
     keyboard_tag: Attribute.String;
     keyboard_price: Attribute.Integer;
@@ -801,7 +801,7 @@ export interface ApiMatrixMatrix extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    matrix_brand: Attribute.String;
+    brand: Attribute.String;
     matrix_diagonale: Attribute.String;
     matrix_permission: Attribute.String;
     matrix_fastening: Attribute.String;
@@ -850,7 +850,7 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
     power_supply_amperage: Attribute.Integer;
     power_supply_form_factor: Attribute.String;
     power_supply_plug: Attribute.String;
-    power_supply_brand: Attribute.String;
+    brand: Attribute.String;
     power_supply_photo: Attribute.Media;
     power_supply_availability: Attribute.String;
     power_supply_tag: Attribute.String;
@@ -892,7 +892,7 @@ export interface ApiRamRam extends Schema.CollectionType {
     ram_memory_mb: Attribute.Integer;
     ram_frequency_mhz: Attribute.Integer;
     ram_memory_type: Attribute.String;
-    ram_brand: Attribute.String;
+    brand: Attribute.String;
     ram_photo: Attribute.Media;
     ram_availability: Attribute.String;
     ram_tag: Attribute.String;

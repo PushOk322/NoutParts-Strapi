@@ -27,7 +27,7 @@
     "battery_color": {
       "type": "string"
     },
-    "batter_brand": {
+    "brand": {
       "type": "string"
     },
     "battery_photo": {

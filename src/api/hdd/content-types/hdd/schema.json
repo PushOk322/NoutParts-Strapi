@@ -24,7 +24,7 @@
     "hdd_technology": {
       "type": "string"
     },
-    "hdd_brand": {
+    "brand": {
       "type": "string"
     },
     "hdd_photo": {

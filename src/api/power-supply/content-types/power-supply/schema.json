@@ -30,7 +30,7 @@
     "power_supply_plug": {
       "type": "string"
     },
-    "power_supply_brand": {
+    "brand": {
       "type": "string"
     },
     "power_supply_photo": {

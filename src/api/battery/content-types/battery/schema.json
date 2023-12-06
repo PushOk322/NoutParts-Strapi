@@ -12,25 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "battery_name": {
+    "name": {
       "type": "string"
     },
-    "battery_capacity": {
+    "capacity": {
       "type": "integer"
     },
-    "battery_voltage": {
+    "voltage": {
       "type": "decimal"
     },
-    "battery_type": {
+    "type": {
       "type": "string"
     },
-    "battery_color": {
+    "color": {
       "type": "string"
     },
     "brand": {
       "type": "string"
     },
-    "battery_photo": {
+    "photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -41,13 +41,13 @@
         "audios"
       ]
     },
-    "battery_availability": {
+    "availability": {
       "type": "string"
     },
-    "battery_tag": {
+    "tag": {
       "type": "string"
     },
-    "battery_price": {
+    "price": {
       "type": "integer"
     }
   }

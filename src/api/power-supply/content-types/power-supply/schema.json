@@ -12,28 +12,28 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "power_supply_name": {
+    "name": {
       "type": "string"
     },
-    "power_supply_power": {
+    "power": {
       "type": "integer"
     },
-    "power_supply_voltage": {
+    "voltage": {
       "type": "float"
     },
-    "power_supply_amperage": {
+    "amperage": {
       "type": "integer"
     },
-    "power_supply_form_factor": {
+    "form_factor": {
       "type": "string"
     },
-    "power_supply_plug": {
+    "plug": {
       "type": "string"
     },
     "brand": {
       "type": "string"
     },
-    "power_supply_photo": {
+    "photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -44,13 +44,13 @@
         "audios"
       ]
     },
-    "power_supply_availability": {
+    "availability": {
       "type": "string"
     },
-    "power_supply_tag": {
+    "tag": {
       "type": "string"
     },
-    "power_supply_price": {
+    "price": {
       "type": "integer"
     }
   }

@@ -12,22 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "keyboard_name": {
+    "name": {
       "type": "string"
     },
-    "keyboard_layout": {
+    "layout": {
       "type": "string"
     },
-    "keyboard_form_factor": {
+    "form_factor": {
       "type": "string"
     },
-    "keyboard_color": {
+    "color": {
       "type": "string"
     },
-    "keyboard_backlight": {
+    "backlight": {
       "type": "string"
     },
-    "keyboard_photo": {
+    "photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -41,13 +41,13 @@
     "brand": {
       "type": "string"
     },
-    "keyboard_availability": {
+    "availability": {
       "type": "string"
     },
-    "keyboard_tag": {
+    "tag": {
       "type": "string"
     },
-    "keyboard_price": {
+    "price": {
       "type": "integer"
     }
   }

@@ -12,31 +12,31 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ram_name": {
+    "name": {
       "type": "string"
     },
-    "ram_jedec": {
+    "jedec": {
       "type": "string"
     },
-    "ram_pin_quantity": {
+    "pin_quantity": {
       "type": "integer"
     },
-    "ram_voltage": {
+    "voltage": {
       "type": "float"
     },
-    "ram_memory_mb": {
+    "memory_mb": {
       "type": "integer"
     },
-    "ram_frequency_mhz": {
+    "frequency_mhz": {
       "type": "integer"
     },
-    "ram_memory_type": {
+    "memory_type": {
       "type": "string"
     },
     "brand": {
       "type": "string"
     },
-    "ram_photo": {
+    "photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -47,13 +47,13 @@
         "audios"
       ]
     },
-    "ram_availability": {
+    "availability": {
       "type": "string"
     },
-    "ram_tag": {
+    "tag": {
       "type": "string"
     },
-    "ram_price": {
+    "price": {
       "type": "integer"
     }
   }

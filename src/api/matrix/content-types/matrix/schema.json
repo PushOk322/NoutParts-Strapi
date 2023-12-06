@@ -15,31 +15,31 @@
     "brand": {
       "type": "string"
     },
-    "matrix_diagonale": {
+    "diagonale": {
       "type": "string"
     },
-    "matrix_permission": {
+    "permission": {
       "type": "string"
     },
-    "matrix_fastening": {
+    "fastening": {
       "type": "string"
     },
-    "matrix_fiber_optic_technology": {
+    "fiber_optic_technology": {
       "type": "string"
     },
-    "matrix_connector": {
+    "connector": {
       "type": "string"
     },
-    "matrix_backlight_type": {
+    "backlight_type": {
       "type": "string"
     },
-    "matrix_hashrate": {
+    "hashrate": {
       "type": "integer"
     },
-    "matrix_price": {
+    "price": {
       "type": "integer"
     },
-    "matrix_photo": {
+    "photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -50,13 +50,13 @@
         "audios"
       ]
     },
-    "matrix_name": {
+    "name": {
       "type": "string"
     },
-    "matrix_availability": {
+    "availability": {
       "type": "string"
     },
-    "matrix_tag": {
+    "tag": {
       "type": "string"
     }
   }

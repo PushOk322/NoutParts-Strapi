@@ -12,22 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "hdd_name": {
+    "name": {
       "type": "string"
     },
-    "hdd_memory_mb": {
+    "memory_mb": {
       "type": "string"
     },
-    "hdd_connector": {
+    "connector": {
       "type": "string"
     },
-    "hdd_technology": {
+    "technology": {
       "type": "string"
     },
     "brand": {
       "type": "string"
     },
-    "hdd_photo": {
+    "photo": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -38,13 +38,13 @@
         "audios"
       ]
     },
-    "hdd_availability": {
+    "availability": {
       "type": "string"
     },
-    "hdd_tag": {
+    "tag": {
       "type": "string"
     },
-    "hdd_price": {
+    "price": {
       "type": "integer"
     }
   }

@@ -46,6 +46,9 @@
     },
     "price": {
       "type": "integer"
+    },
+    "discount": {
+      "type": "integer"
     }
   }
 }

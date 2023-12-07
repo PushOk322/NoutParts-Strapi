@@ -700,6 +700,7 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
     availability: Attribute.String;
     tag: Attribute.String;
     price: Attribute.Integer;
+    discount: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -739,6 +740,7 @@ export interface ApiHddHdd extends Schema.CollectionType {
     availability: Attribute.String;
     tag: Attribute.String;
     price: Attribute.Integer;
+    discount: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -771,6 +773,7 @@ export interface ApiKeyboardKeyboard extends Schema.CollectionType {
     availability: Attribute.String;
     tag: Attribute.String;
     price: Attribute.Integer;
+    discount: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -814,6 +817,7 @@ export interface ApiMatrixMatrix extends Schema.CollectionType {
     name: Attribute.String;
     availability: Attribute.String;
     tag: Attribute.String;
+    discount: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -855,6 +859,7 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
     availability: Attribute.String;
     tag: Attribute.String;
     price: Attribute.Integer;
+    discount: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -897,6 +902,7 @@ export interface ApiRamRam extends Schema.CollectionType {
     availability: Attribute.String;
     tag: Attribute.String;
     price: Attribute.Integer;
+    discount: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

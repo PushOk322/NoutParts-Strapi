@@ -58,6 +58,9 @@
     },
     "tag": {
       "type": "string"
+    },
+    "discount": {
+      "type": "integer"
     }
   }
 }

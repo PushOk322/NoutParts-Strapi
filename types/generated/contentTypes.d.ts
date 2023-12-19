@@ -741,6 +741,7 @@ export interface ApiHddHdd extends Schema.CollectionType {
     tag: Attribute.String;
     price: Attribute.Integer;
     discount: Attribute.Integer;
+    pair_set: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'api::ram.ram'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

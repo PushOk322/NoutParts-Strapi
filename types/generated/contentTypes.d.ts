@@ -837,6 +837,45 @@ export interface ApiMatrixMatrix extends Schema.CollectionType {
   };
 }
 
+export interface ApiOrderOrder extends Schema.CollectionType {
+  collectionName: 'orders';
+  info: {
+    singularName: 'order';
+    pluralName: 'orders';
+    displayName: 'Order';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    first_name: Attribute.String;
+    last_name: Attribute.String;
+    tel: Attribute.String;
+    email: Attribute.Email;
+    comment: Attribute.RichText;
+    delivery: Attribute.String;
+    payment: Attribute.String;
+    town: Attribute.String;
+    filial: Attribute.String;
+    chosen_product: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
   collectionName: 'power_supplies';
   info: {
@@ -934,6 +973,7 @@ declare module '@strapi/types' {
       'api::hdd.hdd': ApiHddHdd;
       'api::keyboard.keyboard': ApiKeyboardKeyboard;
       'api::matrix.matrix': ApiMatrixMatrix;
+      'api::order.order': ApiOrderOrder;
       'api::power-supply.power-supply': ApiPowerSupplyPowerSupply;
       'api::ram.ram': ApiRamRam;
     }

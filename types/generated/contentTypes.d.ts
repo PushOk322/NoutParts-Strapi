@@ -362,6 +362,241 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiBatteryBattery extends Schema.CollectionType {
+  collectionName: 'batteries';
+  info: {
+    singularName: 'battery';
+    pluralName: 'batteries';
+    displayName: 'Battery';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    capacity: Attribute.Integer;
+    voltage: Attribute.Decimal;
+    type: Attribute.String;
+    color: Attribute.String;
+    brand: Attribute.String;
+    photo: Attribute.Media;
+    availability: Attribute.String;
+    tag: Attribute.String;
+    price: Attribute.Integer;
+    discount: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::battery.battery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::battery.battery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHddHdd extends Schema.CollectionType {
+  collectionName: 'hdds';
+  info: {
+    singularName: 'hdd';
+    pluralName: 'hdds';
+    displayName: 'Hdd';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    memory_mb: Attribute.String;
+    connector: Attribute.String;
+    technology: Attribute.String;
+    brand: Attribute.String;
+    photo: Attribute.Media;
+    availability: Attribute.String;
+    tag: Attribute.String;
+    price: Attribute.Integer;
+    discount: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiKeyboardKeyboard extends Schema.CollectionType {
+  collectionName: 'keyboards';
+  info: {
+    singularName: 'keyboard';
+    pluralName: 'keyboards';
+    displayName: 'Keyboard';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    layout: Attribute.String;
+    form_factor: Attribute.String;
+    color: Attribute.String;
+    backlight: Attribute.String;
+    photo: Attribute.Media;
+    brand: Attribute.String;
+    availability: Attribute.String;
+    tag: Attribute.String;
+    price: Attribute.Integer;
+    discount: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::keyboard.keyboard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::keyboard.keyboard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMatrixMatrix extends Schema.CollectionType {
+  collectionName: 'matrices';
+  info: {
+    singularName: 'matrix';
+    pluralName: 'matrices';
+    displayName: 'Matrix';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Attribute.String;
+    diagonale: Attribute.String;
+    permission: Attribute.String;
+    fastening: Attribute.String;
+    fiber_optic_technology: Attribute.String;
+    connector: Attribute.String;
+    backlight_type: Attribute.String;
+    hashrate: Attribute.Integer;
+    price: Attribute.Integer;
+    photo: Attribute.Media;
+    name: Attribute.String;
+    availability: Attribute.String;
+    tag: Attribute.String;
+    discount: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
+  collectionName: 'power_supplies';
+  info: {
+    singularName: 'power-supply';
+    pluralName: 'power-supplies';
+    displayName: 'PowerSupply';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    power: Attribute.Integer;
+    voltage: Attribute.Float;
+    amperage: Attribute.Integer;
+    form_factor: Attribute.String;
+    plug: Attribute.String;
+    brand: Attribute.String;
+    photo: Attribute.Media;
+    availability: Attribute.String;
+    tag: Attribute.String;
+    price: Attribute.Integer;
+    discount: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::power-supply.power-supply',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::power-supply.power-supply',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRamRam extends Schema.CollectionType {
+  collectionName: 'rams';
+  info: {
+    singularName: 'ram';
+    pluralName: 'rams';
+    displayName: 'Ram';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    jedec: Attribute.String;
+    pin_quantity: Attribute.Integer;
+    voltage: Attribute.Float;
+    memory_mb: Attribute.Integer;
+    frequency_mhz: Attribute.Integer;
+    memory_type: Attribute.String;
+    brand: Attribute.String;
+    photo: Attribute.Media;
+    availability: Attribute.String;
+    tag: Attribute.String;
+    price: Attribute.Integer;
+    discount: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::ram.ram', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::ram.ram', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -678,241 +913,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiBatteryBattery extends Schema.CollectionType {
-  collectionName: 'batteries';
-  info: {
-    singularName: 'battery';
-    pluralName: 'batteries';
-    displayName: 'Battery';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    capacity: Attribute.Integer;
-    voltage: Attribute.Decimal;
-    type: Attribute.String;
-    color: Attribute.String;
-    brand: Attribute.String;
-    photo: Attribute.Media;
-    availability: Attribute.String;
-    tag: Attribute.String;
-    price: Attribute.Integer;
-    discount: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::battery.battery',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::battery.battery',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHddHdd extends Schema.CollectionType {
-  collectionName: 'hdds';
-  info: {
-    singularName: 'hdd';
-    pluralName: 'hdds';
-    displayName: 'Hdd';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    memory_mb: Attribute.String;
-    connector: Attribute.String;
-    technology: Attribute.String;
-    brand: Attribute.String;
-    photo: Attribute.Media;
-    availability: Attribute.String;
-    tag: Attribute.String;
-    price: Attribute.Integer;
-    discount: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::hdd.hdd', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiKeyboardKeyboard extends Schema.CollectionType {
-  collectionName: 'keyboards';
-  info: {
-    singularName: 'keyboard';
-    pluralName: 'keyboards';
-    displayName: 'Keyboard';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    layout: Attribute.String;
-    form_factor: Attribute.String;
-    color: Attribute.String;
-    backlight: Attribute.String;
-    photo: Attribute.Media;
-    brand: Attribute.String;
-    availability: Attribute.String;
-    tag: Attribute.String;
-    price: Attribute.Integer;
-    discount: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::keyboard.keyboard',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::keyboard.keyboard',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiMatrixMatrix extends Schema.CollectionType {
-  collectionName: 'matrices';
-  info: {
-    singularName: 'matrix';
-    pluralName: 'matrices';
-    displayName: 'Matrix';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    brand: Attribute.String;
-    diagonale: Attribute.String;
-    permission: Attribute.String;
-    fastening: Attribute.String;
-    fiber_optic_technology: Attribute.String;
-    connector: Attribute.String;
-    backlight_type: Attribute.String;
-    hashrate: Attribute.Integer;
-    price: Attribute.Integer;
-    photo: Attribute.Media;
-    name: Attribute.String;
-    availability: Attribute.String;
-    tag: Attribute.String;
-    discount: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::matrix.matrix',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::matrix.matrix',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
-  collectionName: 'power_supplies';
-  info: {
-    singularName: 'power-supply';
-    pluralName: 'power-supplies';
-    displayName: 'PowerSupply';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    power: Attribute.Integer;
-    voltage: Attribute.Float;
-    amperage: Attribute.Integer;
-    form_factor: Attribute.String;
-    plug: Attribute.String;
-    brand: Attribute.String;
-    photo: Attribute.Media;
-    availability: Attribute.String;
-    tag: Attribute.String;
-    price: Attribute.Integer;
-    discount: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::power-supply.power-supply',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::power-supply.power-supply',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiRamRam extends Schema.CollectionType {
-  collectionName: 'rams';
-  info: {
-    singularName: 'ram';
-    pluralName: 'rams';
-    displayName: 'Ram';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    jedec: Attribute.String;
-    pin_quantity: Attribute.Integer;
-    voltage: Attribute.Float;
-    memory_mb: Attribute.Integer;
-    frequency_mhz: Attribute.Integer;
-    memory_type: Attribute.String;
-    brand: Attribute.String;
-    photo: Attribute.Media;
-    availability: Attribute.String;
-    tag: Attribute.String;
-    price: Attribute.Integer;
-    discount: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::ram.ram', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::ram.ram', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -923,18 +923,18 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'plugin::upload.file': PluginUploadFile;
-      'plugin::upload.folder': PluginUploadFolder;
-      'plugin::i18n.locale': PluginI18NLocale;
-      'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
-      'plugin::users-permissions.role': PluginUsersPermissionsRole;
-      'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::battery.battery': ApiBatteryBattery;
       'api::hdd.hdd': ApiHddHdd;
       'api::keyboard.keyboard': ApiKeyboardKeyboard;
       'api::matrix.matrix': ApiMatrixMatrix;
       'api::power-supply.power-supply': ApiPowerSupplyPowerSupply;
       'api::ram.ram': ApiRamRam;
+      'plugin::upload.file': PluginUploadFile;
+      'plugin::upload.folder': PluginUploadFolder;
+      'plugin::i18n.locale': PluginI18NLocale;
+      'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
+      'plugin::users-permissions.role': PluginUsersPermissionsRole;
+      'plugin::users-permissions.user': PluginUsersPermissionsUser;
     }
   }
 }

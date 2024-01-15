@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appeals",
+  "info": {
+    "singularName": "appeal",
+    "pluralName": "appeals",
+    "displayName": "appeal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "appeal": {
+      "type": "text"
+    },
+    "tel": {
+      "type": "integer"
+    }
+  }
+}

@@ -15,12 +15,6 @@
     "name": {
       "type": "string"
     },
-    "capacity": {
-      "type": "integer"
-    },
-    "voltage": {
-      "type": "decimal"
-    },
     "type": {
       "type": "string"
     },
@@ -52,6 +46,12 @@
     },
     "discount": {
       "type": "integer"
+    },
+    "capacity": {
+      "type": "string"
+    },
+    "voltage": {
+      "type": "string"
     }
   }
 }

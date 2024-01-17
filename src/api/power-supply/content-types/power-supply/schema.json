@@ -18,12 +18,6 @@
     "power": {
       "type": "integer"
     },
-    "voltage": {
-      "type": "float"
-    },
-    "amperage": {
-      "type": "integer"
-    },
     "form_factor": {
       "type": "string"
     },
@@ -55,6 +49,12 @@
     },
     "discount": {
       "type": "integer"
+    },
+    "voltage": {
+      "type": "string"
+    },
+    "amperage": {
+      "type": "string"
     }
   }
 }

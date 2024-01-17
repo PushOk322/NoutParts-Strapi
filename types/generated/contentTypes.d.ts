@@ -725,8 +725,6 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String;
-    capacity: Attribute.Integer;
-    voltage: Attribute.Decimal;
     type: Attribute.String;
     color: Attribute.String;
     brand: Attribute.String;
@@ -735,6 +733,8 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
     tag: Attribute.String;
     price: Attribute.Integer;
     discount: Attribute.Integer;
+    capacity: Attribute.String;
+    voltage: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -954,8 +954,6 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     power: Attribute.Integer;
-    voltage: Attribute.Float;
-    amperage: Attribute.Integer;
     form_factor: Attribute.String;
     plug: Attribute.String;
     brand: Attribute.String;
@@ -964,6 +962,8 @@ export interface ApiPowerSupplyPowerSupply extends Schema.CollectionType {
     tag: Attribute.String;
     price: Attribute.Integer;
     discount: Attribute.Integer;
+    voltage: Attribute.String;
+    amperage: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -996,10 +996,6 @@ export interface ApiRamRam extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     jedec: Attribute.String;
-    pin_quantity: Attribute.Integer;
-    voltage: Attribute.Float;
-    memory_mb: Attribute.Integer;
-    frequency_mhz: Attribute.Integer;
     memory_type: Attribute.String;
     brand: Attribute.String;
     photo: Attribute.Media;
@@ -1007,6 +1003,10 @@ export interface ApiRamRam extends Schema.CollectionType {
     tag: Attribute.String;
     price: Attribute.Integer;
     discount: Attribute.Integer;
+    voltage: Attribute.String;
+    pin_quantity: Attribute.String;
+    memory_mb: Attribute.String;
+    frequency_mhz: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

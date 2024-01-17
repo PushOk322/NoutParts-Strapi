@@ -18,18 +18,6 @@
     "jedec": {
       "type": "string"
     },
-    "pin_quantity": {
-      "type": "integer"
-    },
-    "voltage": {
-      "type": "float"
-    },
-    "memory_mb": {
-      "type": "integer"
-    },
-    "frequency_mhz": {
-      "type": "integer"
-    },
     "memory_type": {
       "type": "string"
     },
@@ -58,6 +46,18 @@
     },
     "discount": {
       "type": "integer"
+    },
+    "voltage": {
+      "type": "string"
+    },
+    "pin_quantity": {
+      "type": "string"
+    },
+    "memory_mb": {
+      "type": "string"
+    },
+    "frequency_mhz": {
+      "type": "string"
     }
   }
 }

@@ -753,6 +753,36 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
   };
 }
 
+export interface ApiEmailEmail extends Schema.CollectionType {
+  collectionName: 'emails';
+  info: {
+    singularName: 'email';
+    pluralName: 'emails';
+    displayName: 'Email';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::email.email',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::email.email',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHddHdd extends Schema.CollectionType {
   collectionName: 'hdds';
   info: {
@@ -1005,6 +1035,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::appeal.appeal': ApiAppealAppeal;
       'api::battery.battery': ApiBatteryBattery;
+      'api::email.email': ApiEmailEmail;
       'api::hdd.hdd': ApiHddHdd;
       'api::keyboard.keyboard': ApiKeyboardKeyboard;
       'api::matrix.matrix': ApiMatrixMatrix;

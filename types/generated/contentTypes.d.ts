@@ -735,6 +735,11 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
     discount: Attribute.Integer;
     capacity: Attribute.String;
     voltage: Attribute.String;
+    pair_set: Attribute.Relation<
+      'api::battery.battery',
+      'oneToOne',
+      'api::matrix.matrix'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -746,6 +751,38 @@ export interface ApiBatteryBattery extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::battery.battery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCallbackCallback extends Schema.CollectionType {
+  collectionName: 'callbacks';
+  info: {
+    singularName: 'callback';
+    pluralName: 'callbacks';
+    displayName: 'Callback';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    tel: Attribute.String;
+    comment: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::callback.callback',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::callback.callback',
       'oneToOne',
       'admin::user'
     > &
@@ -883,6 +920,11 @@ export interface ApiMatrixMatrix extends Schema.CollectionType {
     availability: Attribute.String;
     tag: Attribute.String;
     discount: Attribute.Integer;
+    pair_set: Attribute.Relation<
+      'api::matrix.matrix',
+      'oneToOne',
+      'api::battery.battery'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1007,6 +1049,7 @@ export interface ApiRamRam extends Schema.CollectionType {
     pin_quantity: Attribute.String;
     memory_mb: Attribute.String;
     frequency_mhz: Attribute.String;
+    pair_set: Attribute.Relation<'api::ram.ram', 'oneToOne', 'api::hdd.hdd'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1035,6 +1078,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::appeal.appeal': ApiAppealAppeal;
       'api::battery.battery': ApiBatteryBattery;
+      'api::callback.callback': ApiCallbackCallback;
       'api::email.email': ApiEmailEmail;
       'api::hdd.hdd': ApiHddHdd;
       'api::keyboard.keyboard': ApiKeyboardKeyboard;

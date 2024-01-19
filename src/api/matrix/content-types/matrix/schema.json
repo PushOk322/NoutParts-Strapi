@@ -61,6 +61,11 @@
     },
     "discount": {
       "type": "integer"
+    },
+    "pair_set": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::battery.battery"
     }
   }
 }

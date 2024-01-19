@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "callbacks",
+  "info": {
+    "singularName": "callback",
+    "pluralName": "callbacks",
+    "displayName": "Callback"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "blocks"
+    }
+  }
+}

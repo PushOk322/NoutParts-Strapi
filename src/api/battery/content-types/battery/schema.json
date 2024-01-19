@@ -52,6 +52,11 @@
     },
     "voltage": {
       "type": "string"
+    },
+    "pair_set": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::matrix.matrix"
     }
   }
 }

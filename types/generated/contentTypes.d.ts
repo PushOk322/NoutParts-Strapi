@@ -943,6 +943,37 @@ export interface ApiMatrixMatrix extends Schema.CollectionType {
   };
 }
 
+export interface ApiOneClickBuyOneClickBuy extends Schema.CollectionType {
+  collectionName: 'one_click_buys';
+  info: {
+    singularName: 'one-click-buy';
+    pluralName: 'one-click-buys';
+    displayName: 'OneClickBuy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tel: Attribute.String;
+    product: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::one-click-buy.one-click-buy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::one-click-buy.one-click-buy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOrderOrder extends Schema.CollectionType {
   collectionName: 'orders';
   info: {
@@ -1083,6 +1114,7 @@ declare module '@strapi/types' {
       'api::hdd.hdd': ApiHddHdd;
       'api::keyboard.keyboard': ApiKeyboardKeyboard;
       'api::matrix.matrix': ApiMatrixMatrix;
+      'api::one-click-buy.one-click-buy': ApiOneClickBuyOneClickBuy;
       'api::order.order': ApiOrderOrder;
       'api::power-supply.power-supply': ApiPowerSupplyPowerSupply;
       'api::ram.ram': ApiRamRam;

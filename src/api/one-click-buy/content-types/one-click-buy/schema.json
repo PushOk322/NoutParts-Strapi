@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "one_click_buys",
+  "info": {
+    "singularName": "one-click-buy",
+    "pluralName": "one-click-buys",
+    "displayName": "OneClickBuy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tel": {
+      "type": "string"
+    },
+    "product": {
+      "type": "json"
+    }
+  }
+}
